@@ -1,0 +1,96 @@
+---
+import Input from './Input.tsx';
+---
+
+<form id="contact-form" class="mt-6 space-y-4">
+  <p>
+    Можете допомогти інакше? Напишіть нам, щоб обговорити деталі та умови
+    співпраці:
+  </p>
+  <div>
+    <div class="grid md:grid-cols-2 md:gap-6">
+      <Input
+        name="first-name"
+        label="Ім'я *"
+        required
+        autocomplete="given-name"
+      />
+      <Input
+        name="last-name"
+        label="Прізвище *"
+        required
+        autocomplete="family-name"
+      />
+    </div>
+    <div class="grid md:grid-cols-2 md:gap-6">
+      <Input name="phone" type="tel" label="Телефон" />
+      <Input name="email" type="email" label="Пошта *" />
+    </div>
+    <div class="w-full">
+      <Input name="text" type="textarea" label="Текст" />
+    </div>
+  </div>
+  <button class="w-full bg-primary-yellow p-3 text-2xl font-bold text-black"
+    >надіслати</button
+  >
+</form>
+
+<script>
+  const form = document.querySelector('#contact-form');
+
+  const formatEmail = ({ firstName, lastName, email, phone, message }) => {
+    return `
+      Name: ${firstName} ${lastName}
+      Email: ${email}
+      Phone: ${phone}
+      Message: \n${message}`;
+    return `<!DOCTYPE html>
+          <html>
+            <head>
+              <meta charset="UTF-8">
+              <title>Contact Form Submission</title>
+              <style>
+                body {
+                  font-family: Arial, sans-serif;
+                  font-size: 16px;
+                  line-height: 1.6;
+                  color: #333;
+                }
+                h2 {
+                  font-size: 24px;
+                  font-weight: bold;
+                  margin-top: 0;
+                }
+                strong {
+                  font-weight: bold;
+                }
+                p {
+                  margin: 0 0 20px;
+                }
+              </style>
+            </head>
+            <body>
+              <h2>Contact Form Submission</h2>
+              <p><strong>First Name:</strong> ${firstName}</p>
+              <p><strong>Last Name:</strong> ${lastName}</p>
+              <p><strong>Email:</strong> ${email}</p>
+              <p><strong>Phone:</strong> ${phone}</p>
+              <p><strong>Message:</strong></p>
+              <p>${message}</p>
+            </body>
+          </html>`;
+  };
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // open email client
+    const formData = new FormData(form);
+    const body = formatEmail(Object.fromEntries(formData.entries()));
+
+    const subject = 'Питання про співпрацю';
+    const mailto = `mailto:asd@gmail.com?subject=${subject}&body=${body}`;
+
+    window.open(mailto, '_blank');
+  });
+</script>

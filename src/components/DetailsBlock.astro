@@ -1,0 +1,56 @@
+---
+interface Props {
+  class?: string;
+  theme: 'dark' | 'light' | 'white';
+}
+
+const { theme, class: className = '' } = Astro.props;
+
+const bg = {
+  dark: 'bg-primary-blue',
+  light: 'bg-primary-blue-light',
+  white: 'bg-white',
+}[theme];
+
+const text = {
+  dark: 'text-white',
+  light: 'text-white',
+  white: 'text-black',
+}[theme];
+
+const cubePosition = {
+  dark: 'bottom-0 left-0',
+  light: 'top-0 right-0',
+  white: '',
+}[theme];
+---
+
+<article
+  class:list={[
+    'relative p-12 relative group flex flex-col',
+    text,
+    bg,
+    theme,
+    className,
+  ]}
+>
+  <h3 class="mb-5 text-2xl">
+    <slot name="title" />
+  </h3>
+  <p class="mb-5 text-lg"><slot /></p>
+  <button
+    type="button"
+    class="ml-auto border border-primary-yellow py-2 px-4 text-xs font-bold uppercase text-primary-yellow group-[.white]:text-black"
+    >Докладніше</button
+  >
+  {
+    ['dark', 'light'].includes(theme) && (
+      <div
+        class:list={[
+          'bg-primary-yellow absolute h-[50px] w-[50px]',
+          cubePosition,
+        ]}
+      />
+    )
+  }
+</article>

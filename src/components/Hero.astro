@@ -1,0 +1,40 @@
+---
+import DetailsBlock from './DetailsBlock.astro';
+---
+
+<section class="flex justify-end">
+  <div class="relative w-full max-w-[1440px] p-5 pt-[55vw] md:p-0 md:pt-0">
+    <img
+      src="/banner.png"
+      alt=""
+      class="absolute top-0 left-0 w-full md:right-0 md:left-auto md:h-full md:w-auto"
+    />
+    <div
+      class="grid grid-cols-[minmax(250px,380px)] justify-center md:grid-cols-[repeat(2,minmax(250px,360px))] md:justify-start min-[1080px]:grid-cols-[repeat(3,minmax(250px,360px))]"
+    >
+      <div class="hidden min-[1080px]:block"></div>
+      <DetailsBlock theme="dark" class="w-full h-full">
+        <span slot="title">Допомога <br /><b>захисникам</b></span>
+        24 лютого 2022 року життя України змінилось назавжди. Того злощасного ранку
+        наша країна прокинулась.
+      </DetailsBlock>
+      <figure
+        class="relative row-start-2 hidden h-full w-full overflow-hidden min-[1080px]:block"
+      >
+        <img src="/hero-img-1.png" alt="" class="" />
+      </figure>
+      <DetailsBlock theme="white" class="row-start-2 w-full h-full">
+        <span slot="title">Допомога на <br /><b>відбудову Харкова</b></span>
+        24 лютого 2022 року життя України змінилось назавжди. Того злощасного ранку.
+      </DetailsBlock>
+      <DetailsBlock
+        theme="light"
+        class="md:row-start-2 min-[1080px]:col-start-3 w-full h-full"
+      >
+        <span slot="title">Допомога <br /><b>постраждалим</b></span>
+        24 лютого 2022 року життя України змінилось назавжди. Того злощасного ранку
+        наша країна прокинулась від звуків російських обстрілів.
+      </DetailsBlock>
+    </div>
+  </div>
+</section>

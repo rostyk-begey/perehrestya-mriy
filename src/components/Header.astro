@@ -1,0 +1,43 @@
+---
+import LangSelector from './LangSelector.tsx';
+import MobileMenu from './MobileMenu.tsx';
+
+const menuItems = [
+  { title: 'про фонд', href: '#about' },
+  { title: 'напрямки роботи', href: '#directions' },
+  { title: 'документи', href: '#documents' },
+  { title: 'зв’язок', href: '#contact' },
+];
+---
+
+<header class="sticky top-0 z-40 bg-white px-5 shadow-md">
+  <div
+    class="container mx-auto flex min-h-[78px] items-center justify-between md:min-h-[125px]"
+  >
+    <img src="/logo-uk.svg" alt="logo" class="h-12 md:h-[77px]" />
+    <div class="hidden items-center gap-5 md:gap-10 lg:flex">
+      <nav>
+        <ul class="flex gap-5 text-xs font-bold uppercase leading-5 text-black">
+          {
+            menuItems.map((item) => (
+              <li class="border-b-4 border-transparent hover:border-primary-yellow active:border-primary-yellow">
+                <a href={item.href}>{item.title}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+      <a
+        href="#contact"
+        class="bg-primary-yellow py-2 px-4 text-xs font-bold uppercase text-black"
+        >контакти</a
+      >
+      <LangSelector client:visible />
+      <div class="flex gap-6">
+        <a href="#"><img src="/instagram-icon.svg" alt="" /></a>
+        <a href="#"><img src="/facebook-icon.svg" alt="" /></a>
+      </div>
+    </div>
+    <MobileMenu menuItems={menuItems} client:media="(max-width: 768px)" />
+  </div>
+</header>

@@ -1,0 +1,126 @@
+---
+import 'swiper/swiper-bundle.min.css';
+---
+
+<section>
+  <div class="swiper-container relative pb-10">
+    <div id="slider" class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="/slide-1.png" alt="" /></div>
+        <div class="swiper-slide"><img src="/slide-2.png" alt="" /></div>
+        <div class="swiper-slide"><img src="/slide-3.png" alt="" /></div>
+        <div class="swiper-slide"><img src="/slide-4.png" alt="" /></div>
+        <div class="swiper-slide"><img src="/slide-1.png" alt="" /></div>
+        <div class="swiper-slide"><img src="/slide-2.png" alt="" /></div>
+        <div class="swiper-slide"><img src="/slide-3.png" alt="" /></div>
+        <div class="swiper-slide"><img src="/slide-4.png" alt="" /></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+    <div class="swiper-pagination space-x-3"></div>
+  </div>
+</section>
+
+<style is:global>
+  .swiper-pagination {
+    pointer-events: all !important;
+  }
+
+  .swiper-slide {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .swiper-slide:before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #0062ff;
+    opacity: 0;
+    z-index: 1;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .swiper-slide:hover:before {
+    opacity: 0.4;
+  }
+
+  .swiper-pagination > * {
+    border-radius: 0 !important;
+    height: 3px;
+    width: 16px;
+    gap: 6px;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #0062ff;
+    opacity: 1;
+    width: 24px;
+  }
+</style>
+
+<script>
+  import { Swiper, Pagination, Navigation } from 'swiper';
+
+  Swiper.use([Navigation, Pagination]);
+
+  const slider = new Swiper('#slider', {
+    loop: true,
+    // loopedSlides: 8,
+    slidesPerView: 6,
+    spaceBetween: 0,
+    speed: 1000,
+    autoplay: {
+      delay: 5000,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      // dynamicBullets: true,
+      // bulletClass: 'bullet',
+      // 'inline-block w-4 bg-[#0062FF] bg-opacity-30 h-[4px] cursor-pointer',
+      // bulletActiveClass: '',
+      // bulletActiveClass: 'pagination-bullet-active',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      200: {
+        slidesPerView: 1.5,
+        centeredSlides: true,
+      },
+      490: {
+        slidesPerView: 2,
+        centeredSlides: true,
+      },
+      665: {
+        slidesPerView: 3,
+        centeredSlides: true,
+      },
+      1000: {
+        slidesPerView: 3.5,
+        centeredSlides: true,
+      },
+      1160: {
+        slidesPerView: 4,
+        centeredSlides: true,
+      },
+      1320: {
+        slidesPerView: 4.5,
+        centeredSlides: true,
+      },
+      1490: {
+        slidesPerView: 5,
+        centeredSlides: true,
+      },
+      1660: {
+        slidesPerView: 6,
+        centeredSlides: false,
+        spaceBetween: 0,
+      },
+    },
+  });
+</script>

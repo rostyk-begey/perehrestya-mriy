@@ -1,0 +1,29 @@
+---
+import DetailsBlock from '../components/DetailsBlock.astro';
+---
+
+<section id="directions" class="lg:px-62 py-20 px-6 md:py-12 md:px-10 lg:py-16">
+  <div class="container mx-auto flex flex-col">
+    <h2 class="mx-auto mb-8 text-3xl font-bold font-bold md:mb-12 md:text-6xl">
+      Напрямки діяльності
+    </h2>
+    <div
+      class="mx-auto grid w-full max-w-7xl grid-cols-[minmax(250px,380px)] place-content-center lg:grid-cols-3"
+    >
+      <DetailsBlock theme="dark" class="">
+        <span slot="title">Допомога <br /><b>захисникам</b></span>
+        24 лютого 2022 року життя України змінилось назавжди. Того злощасного ранку
+        наша країна прокинулась.
+      </DetailsBlock>
+      <DetailsBlock theme="white" class="">
+        <span slot="title">Допомога на <br /><b>відбудову Харкова</b></span>
+        24 лютого 2022 року життя України змінилось назавжди. Того злощасного ранку.
+      </DetailsBlock>
+      <DetailsBlock theme="light" class="">
+        <span slot="title">Допомога <br /><b>постраждалим</b></span>
+        24 лютого 2022 року життя України змінилось назавжди. Того злощасного ранку
+        наша країна прокинулась від звуків російських обстрілів.
+      </DetailsBlock>
+    </div>
+  </div>
+</section>
