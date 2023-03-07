@@ -11,10 +11,20 @@ const MobileMenu = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleOpen = () => {
+    document.documentElement.style.overflow = 'hidden';
+    setIsOpen(true);
+  };
+
+  const handleClose = () => {
+    document.documentElement.style.overflow = 'auto';
+    setIsOpen(false);
+  };
+
   const handleChildrenClick = (e: MouseEvent) => {
     const target = e.target as HTMLElement;
     if (target.dataset.action === 'close') {
-      setIsOpen(false);
+      handleClose();
     }
   };
 
@@ -22,8 +32,8 @@ const MobileMenu = ({
     <>
       <button
         type="button"
-        className="w-7 space-y-2 md:hidden"
-        onClick={() => setIsOpen(true)}
+        className="w-7 space-y-2 lg:hidden"
+        onClick={handleOpen}
       >
         <span className="block h-0.5 w-full bg-black"></span>
         <span className="block h-0.5 w-full bg-black"></span>
@@ -31,7 +41,7 @@ const MobileMenu = ({
       </button>
       <Transition show={isOpen} as={Fragment}>
         <Dialog
-          onClose={() => setIsOpen(false)}
+          onClose={handleClose}
           className="fixed top-0 z-50 h-[100dvh] w-full"
         >
           <Transition.Child
@@ -60,14 +70,14 @@ const MobileMenu = ({
             >
               <div className="flex min-h-[78px] items-center justify-between px-5 md:min-h-[125px]">
                 <img
-                  src="/logo-uk.svg"
+                  src="/images/logo-uk.svg"
                   alt="logo"
                   className="h-12 md:h-[77px]"
                 />
                 <button
                   type="button"
                   className="relative h-[22px] w-7"
-                  onClick={() => setIsOpen(false)}
+                  onClick={handleClose}
                 >
                   <span className="absolute block h-0.5 w-full rotate-45 bg-black"></span>
                   <span className="absolute block h-0.5 w-full -rotate-45 bg-black"></span>
@@ -98,10 +108,10 @@ const MobileMenu = ({
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-6">
                     <a data-action="close" href="#">
-                      <img src="/instagram-icon.svg" alt="" />
+                      <img src="/images/instagram-icon.svg" alt="" />
                     </a>
                     <a data-action="close" href="#">
-                      <img src="/facebook-icon.svg" alt="" />
+                      <img src="/images/facebook-icon.svg" alt="" />
                     </a>
                   </div>
                   <a

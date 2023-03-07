@@ -5,7 +5,7 @@ const FaqItem = ({ title, children }: { title: string; children: string }) => (
     {({ open }) => (
       <>
         <Disclosure.Button className="flex w-full items-center justify-between border-t border-gray-500 py-4 text-left">
-          <span className="text-2xl font-bold">{title}</span>
+          <span className="font-heading text-2xl font-bold">{title}</span>
           <svg
             data-accordion-icon
             className={`h-6 w-6 shrink-0 ${open && 'rotate-180'}`}

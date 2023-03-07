@@ -1,82 +1,85 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Header from '../components/Header.astro';
+import FAQ from '../components/FAQ.astro';
+import SliderSection from '../components/SliderSection.astro';
+import Documents from '../components/Documents.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import Goods from '../components/Goods.astro';
+import Coordinators from '../components/Coordinators.astro';
+import Join from '../components/Join.astro';
+import Partners from '../components/Partners.astro';
+import About from '../components/About.astro';
+import Directions from '../components/Directions.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Перехрестя Мрій">
+  <Header />
   <main>
-    <h1>Welcome to <span class="text-gradient font-small">Astro</span></h1>
-    <p class="instructions">
-      To get started, open the directory <code>src/pages</code> in your project.<br
-      />
-      <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-    </p>
-    <ul role="list" class="link-card-grid">
-      <Card
-        href="https://docs.astro.build/"
-        title="Documentation"
-        body="Learn how Astro works and explore the official API docs."
-      />
-      <Card
-        href="https://astro.build/integrations/"
-        title="Integrations"
-        body="Supercharge your project with new frameworks and libraries."
-      />
-      <Card
-        href="https://astro.build/themes/"
-        title="Themes"
-        body="Explore a galaxy of community-built starter themes."
-      />
-      <Card
-        href="https://astro.build/chat/"
-        title="Community"
-        body="Come say hi to our amazing Discord community. ❤️"
-      />
-    </ul>
+    <Hero />
+    <section class="p-12">
+      <div
+        class="mx-auto flex max-w-5xl flex-col items-center gap-12 text-center"
+      >
+        <p class="text-2xl">
+          Триває збір коштів на допомогу жителям деокупованих населених пунктів
+          Харківської, Донецької та Луганської областей.
+        </p>
+        <a href="#join" class="bg-primary-yellow py-2 px-4 font-bold text-black"
+          >долучитись до збору</a
+        >
+      </div>
+    </section>
+    <section
+      class="lg:px-62 relative bg-primary-blue py-10 px-6 md:py-12 md:px-10 lg:py-16"
+    >
+      <div class="mx-auto max-w-5xl">
+        <h2
+          class="mb-4 font-heading text-3xl font-bold text-white md:text-6xl lg:mb-8"
+        >
+          “В своїй хаті своя й правда, і сила, і воля.”
+        </h2>
+        <div class="space-y-4 text-sm leading-6 text-white md:text-lg">
+          <p>
+            Під час війни в Україні основною і єдиною метою може бути тільки –
+            Допомогати, Допомогати-з-Любов’ю. Наразі допомога ЗСУ – це вклад в
+            Перемогу. Допомога населенню – це тепло та душевна втіха.
+          </p>
+          <p>
+            Ми харків’яни, любимо наше місто та його мешканців, саме тому
+            відновлення міста після війни є нашою метою, а входження міста до
+            першої сотні (Global Cities Index или Global Citу) – це не мрія, це
+            наша мета.
+          </p>
+        </div>
+      </div>
+      <div
+        class="absolute right-0 bottom-0 h-[128px] w-[64px] translate-y-1/2 bg-primary-yellow"
+      >
+      </div>
+    </section>
+    <About />
+    <SliderSection />
+    <Directions />
+    <Goods />
+    <Coordinators />
+    <Partners />
+    <section
+      class="flex flex-wrap items-center justify-center gap-6 bg-primary-blue py-16 px-5 text-center md:h-56 md:gap-5 md:px-10"
+    >
+      <span class="font-heading text-3xl font-bold text-white md:text-2xl"
+        >Нам потрібна ваша підтримка!</span
+      >
+      <a
+        href="#contact"
+        class="bg-primary-yellow px-14 py-2 px-4 font-heading text-2xl font-bold text-black md:text-base"
+        >хочу допомогти</a
+      >
+    </section>
+    <FAQ />
+    <Documents />
+    <Join />
+    <Footer />
   </main>
 </Layout>
-
-<style>
-  main {
-    margin: auto;
-    padding: 1.5rem;
-    max-width: 60ch;
-  }
-  h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin: 0;
-  }
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
-  }
-  .instructions {
-    line-height: 1.6;
-    margin: 1rem 0;
-    border: 1px solid rgba(var(--accent), 25%);
-    background-color: white;
-    padding: 1rem;
-    border-radius: 0.4rem;
-  }
-  .instructions code {
-    font-size: 0.875em;
-    font-weight: bold;
-    background: rgba(var(--accent), 12%);
-    color: rgb(var(--accent));
-    border-radius: 4px;
-    padding: 0.3em 0.45em;
-  }
-  .instructions strong {
-    color: rgb(var(--accent));
-  }
-  .link-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 1rem;
-    padding: 0;
-  }
-</style>

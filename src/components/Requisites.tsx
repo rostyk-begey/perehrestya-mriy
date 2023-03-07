@@ -62,7 +62,7 @@ const Requisites = () => {
           <p className="text-xs">
             QR-код для швидкого переказу через Приват24:
           </p>
-          <img src="/Pryvat-QR-code.png" alt="" />
+          <img src="/images/Pryvat-QR-code.png" alt="" />
         </div>
       </div>
     </Tab.Group>
