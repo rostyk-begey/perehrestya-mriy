@@ -46,8 +46,8 @@ const Requisites = () => {
       </Tab.List>
       <div className="flex flex-wrap justify-between gap-5">
         <Tab.Panels as={Fragment}>
-          {Object.values(tabs).map((data) => (
-            <Tab.Panel>
+          {Object.values(tabs).map((data, i) => (
+            <Tab.Panel key={i}>
               <ul>
                 {Object.entries(data).map(([key, value]) => (
                   <li key={key}>
