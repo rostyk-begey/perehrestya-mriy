@@ -1,96 +1,62 @@
 ---
+import { t } from 'i18next';
 import Input from './Input.tsx';
 ---
 
 <form id="contact-form" class="mt-6 space-y-4">
   <p>
-    Можете допомогти інакше? Напишіть нам, щоб обговорити деталі та умови
-    співпраці:
+    {t('join.formCation')}
   </p>
   <div>
     <div class="grid md:grid-cols-2 md:gap-6">
       <Input
-        name="first-name"
-        label="Ім'я *"
+        name="firstName"
+        label={t('join.form.firstName')}
         required
         autocomplete="given-name"
       />
       <Input
-        name="last-name"
-        label="Прізвище *"
+        name="lastName"
+        label={t('join.form.lastName')}
         required
         autocomplete="family-name"
       />
     </div>
     <div class="grid md:grid-cols-2 md:gap-6">
-      <Input name="phone" type="tel" label="Телефон" />
-      <Input name="email" type="email" label="Пошта *" />
+      <Input name="phone" type="tel" label={t('join.form.phone')} />
+      <Input name="email" type="email" label={t('join.form.email')} />
     </div>
     <div class="w-full">
-      <Input name="text" type="textarea" label="Текст" />
+      <Input name="message" type="textarea" label={t('join.form.message')} />
     </div>
   </div>
   <button
     class="w-full bg-primary-yellow p-3 font-heading text-2xl font-bold text-black"
-    >надіслати</button
+    >{t('join.form.button')}</button
   >
 </form>
 
 <script>
   const form = document.querySelector('#contact-form');
 
-  const formatEmail = ({ firstName, lastName, email, phone, message }) => {
-    return `
-      Name: ${firstName} ${lastName}
-      Email: ${email}
-      Phone: ${phone}
-      Message: \n${message}`;
-    return `<!DOCTYPE html>
-          <html>
-            <head>
-              <meta charset="UTF-8">
-              <title>Contact Form Submission</title>
-              <style>
-                body {
-                  font-family: Arial, sans-serif;
-                  font-size: 16px;
-                  line-height: 1.6;
-                  color: #333;
-                }
-                h2 {
-                  font-size: 24px;
-                  font-weight: bold;
-                  margin-top: 0;
-                }
-                strong {
-                  font-weight: bold;
-                }
-                p {
-                  margin: 0 0 20px;
-                }
-              </style>
-            </head>
-            <body>
-              <h2>Contact Form Submission</h2>
-              <p><strong>First Name:</strong> ${firstName}</p>
-              <p><strong>Last Name:</strong> ${lastName}</p>
-              <p><strong>Email:</strong> ${email}</p>
-              <p><strong>Phone:</strong> ${phone}</p>
-              <p><strong>Message:</strong></p>
-              <p>${message}</p>
-            </body>
-          </html>`;
-  };
+  const formatEmail = ({ firstName, lastName, email, phone, message }) =>
+    `Name: ${firstName} ${lastName} \n` +
+    `Email: ${email} \n` +
+    `Phone: ${phone} \n` +
+    `Message: \n${message}`;
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     // open email client
     const formData = new FormData(form);
+    console.log(Object.fromEntries(formData.entries()));
     const body = formatEmail(Object.fromEntries(formData.entries()));
 
     const subject = 'Питання про співпрацю';
-    const mailto = `mailto:asd@gmail.com?subject=${subject}&body=${body}`;
+    const mailto = `mailto:perehrestya.mriy@gmail.com?subject=${subject}&body=${encodeURIComponent(
+      body,
+    )}`;
 
     window.open(mailto, '_blank');
   });

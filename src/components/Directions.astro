@@ -1,4 +1,6 @@
 ---
+import { t } from 'i18next';
+
 import DetailsBlock, {
   DetailsBlock1,
   DetailsBlock2,
@@ -11,14 +13,14 @@ import DetailsBlock, {
     <h2
       class="mx-auto mb-8 font-heading text-3xl font-bold font-bold md:mb-12 md:text-6xl"
     >
-      Напрямки діяльності
+      {t('directions.title')}
     </h2>
     <div
       class="mx-auto grid w-full max-w-7xl grid-cols-[minmax(250px,380px)] place-content-center lg:grid-cols-3"
     >
-      <DetailsBlock1 client:idle />
-      <DetailsBlock2 client:idle />
-      <DetailsBlock3 client:idle />
+      <DetailsBlock1 client:load />
+      <DetailsBlock2 client:load />
+      <DetailsBlock3 client:load />
     </div>
   </div>
 </section>

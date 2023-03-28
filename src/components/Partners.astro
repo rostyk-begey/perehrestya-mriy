@@ -1,9 +1,13 @@
+---
+import { t } from 'i18next';
+---
+
 <section class="lg:px-62 px-6 pb-20 md:px-10 md:pb-12 lg:py-16">
   <div class="container mx-auto flex flex-col">
     <h2
       class="mx-auto mb-8 font-heading text-3xl font-bold font-bold md:mb-12 md:text-6xl"
     >
-      Партнери
+      {t('partners.title')}
     </h2>
   </div>
   <div class="flex flex-wrap justify-center gap-20">
@@ -13,7 +17,7 @@
         class="mb-4 block max-h-28"
         alt="Layer 1"
       />
-      <span class="">Дата центр</span>
+      <span class="">{t('partners.items.0.title')}</span>
     </div>
     <div class="item-center flex flex-col text-center">
       <img
@@ -21,7 +25,7 @@
         class="mb-4 block max-h-28"
         alt="Харківська міська рада"
       />
-      <span class="">Харківська міська рада</span>
+      <span class="">{t('partners.items.1.title')}</span>
     </div>
   </div>
 </section>

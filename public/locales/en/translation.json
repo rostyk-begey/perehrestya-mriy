@@ -1,0 +1,210 @@
+{
+  "meta": {
+    "title": "Donate to Ukraine - Perehrestya Mriy",
+    "description": "Charity Foundation \"Perehrestya Mriy\" - Aid for Defenders, victims of war in Ukraine"
+  },
+  "navigation": {
+    "logoUrl": "/images/logo-en.svg",
+    "about": "about foundation",
+    "directions": "areas of work",
+    "documents": "documents",
+    "button": "contacts"
+  },
+  "directions": {
+    "title": "Areas of activity",
+    "readMore": "read more",
+    "joinButton": "join to fundraising",
+    "items": [
+      {
+        "title": "Aid for <1>defenders</1>",
+        "excerpt": "We provide prompt assistance with clothing, equipment, and personal protective gear for our defenders.\n",
+        "content": "Supporting Ukrainian soldiers has become the top priority of our foundation. We, like most Ukrainians, feel accountable for proper provisioning of the Armed Forces of Ukraine and territorial defense units, so we are doing everything we can to help them in their fight.\nTo support our country's defenders, we started a fundraising campaign. You can also help the soldiers who are defending our country by joining our charitable initiative and making a donation."
+      },
+      {
+        "title": "Assistance for <1>Kharkiv's reconstruction</1>",
+        "excerpt": "Our goal is to restore the civil infrastructure of the Kharkiv region's institutions as well as cultural heritage sites\n",
+        "content": "We are waiting for a great victory, but that anticipation doesn’t stop our urge to help revitalize our hometown. Currently, we are engaged in the reconstruction of \"Saltivskyi Lid\" ice arena, which is the part of Specialised Children’s and Youth Sports School of the Olympic Reserve.\nThe foundation intends to continue playing an important role in supporting the process of rebuilding the city of Kharkiv, which is the only city in Ukraine awarded with the highest European award – the Europe Prize"
+      },
+      {
+        "title": "Aid to the <1>victims of war</1>",
+        "excerpt": "We are implementing life-saving programs for people affected by the war, who need assistance.",
+        "content": "Thousands of civilians have lost their homes and belongings, and most of them have no access to necessary medical supplies or basic hygiene items. Due to the Russian military intervention hundreds of towns and villages are on the verge of a humanitarian catastrophe.\nWe are implementing life-saving programs to help people who have suffered from the war and need assistance. We ask for your support in achieving our goal."
+      }
+    ]
+  },
+  "about": {
+    "title": "About the Foundation",
+    "description": "We are a team of like-minded patriots who, as ordinary volunteers and donors, have helped the army since the very beginning of the protracted war, when the aggressor began the occupation of Crimea and Donbas. It was then in 2014 that we realized that whatever support we can provide, it is extremely needed.\n\nAfter Russia mounted a full-scale invasion of Ukraine, our goal shifted to helping individual units of the Armed Forces to address their immediate needs. Each new day of the war underlined the urgency of expanding our activities, because even such elementary things as medical supplies for the population, are still needed today. \nAt one point, it became clear that we can not handle it on our own, and we need additional support , from both donors and volunteers. Thus, our team decided to establish \"Perehrestya Mriy\" Charity Fund. We believe it was a good and timely move that will enable us to yield great benefits not only for the Armed Forces of Ukraine, but also our for native city of Kharkiv."
+  },
+  "goods": {
+    "title": "Necessary goods",
+    "items": [
+      {
+        "title": "Food"
+      },
+      {
+        "title": "Hygiene products"
+      },
+      {
+        "title": "Fuel"
+      },
+      {
+        "title": "Diesel generators"
+      },
+      {
+        "title": "Building materials"
+      },
+      {
+        "title": "Military clothing"
+      },
+      {
+        "title": "Medical equipment"
+      }
+    ]
+  },
+  "coordinators": {
+    "title": "Coordinators",
+    "items": [
+      {
+        "name": "Oleksandra Skorohodova",
+        "label": "Financial and legal issues",
+        "phone": "+380 67 673 1564",
+        "image": "/images/oleksandra-skorohodova.png"
+      },
+      {
+        "name": "Vadim Leonov",
+        "label": "Co-founder",
+        "phone": "+380 63 745 53 75",
+        "image": "/images/vadim-leontov.png"
+      },
+      {
+        "name": "Mykhailo Bolotov",
+        "label": "Co-founder",
+        "phone": "+380 68 380 1321",
+        "image": "/images/mykhailo-bolotov.png"
+      }
+    ]
+  },
+  "partners": {
+    "title": "Partners",
+    "items": [
+      {
+        "title": "Data center",
+        "link": ""
+      },
+      {
+        "title": "Kharkiv City Council",
+        "link": ""
+      }
+    ]
+  },
+  "cta1": {
+    "description": "We are raising money for the residents of de-occupied territories in the Kharkiv region.",
+    "button": "join to fundraising"
+  },
+  "text": {
+    "title": "\"In one’s own house,– one’s own truth, \nOne’s own might and freedom.\"",
+    "description": "During the war, helping others became everyone’s main goal. Currently, we see assistance to Ukraine's Armed Forces as a major contribution to our victory.\nWe are the citizens of Kharkiv, and we love our city and its people.That’s why restoring the city after the war is our mission, and its recognition in the top 100 Global Cities Index is not merely a dream, but one of our main goals."
+  },
+  "cta2": {
+    "description": "We need your support!",
+    "button": "I want to join"
+  },
+  "faq": {
+    "title": "Questions and answers",
+    "items": [
+      {
+        "question": "How can I help?",
+        "answer": "We need financial or humanitarian aid. Humanitarian aid can consist of food and hygiene products for civilians, military ammunition for our defenders, or medicine and equipment for hospitals treating those affected by Russian military aggression."
+      },
+      {
+        "question": "I want to provide humanitarian cargo, how do I do it?",
+        "answer": "Please contact us, and we will discuss all the  details."
+      }
+    ]
+  },
+  "documents": {
+    "title": "Documents",
+    "items": [
+      {
+        "title": "Extract from the Unified State Register of Legal Entities",
+        "description": "",
+        "link": ""
+      },
+      {
+        "title": "Charter of the Fund",
+        "description": "",
+        "link": ""
+      },
+      {
+        "title": "Public Offer Agreement",
+        "description": "",
+        "link": ""
+      }
+    ]
+  },
+  "join": {
+    "title": "Join",
+    "requisitesCaption": "If you want to support our fundraising activity, you can donate here:",
+    "formCation": "If you want to help in any other way, let us know and we will find something for you to do.",
+    "prirvatbankQRcodeCaption": "QR-code for quick payment via PrivatBank",
+    "requisites": {
+      "UAH": [
+        { "key": "Recipient", "value": "CO CF “Perehrestya Mriy”" },
+        { "key": "USREOU code", "value": "44670442" },
+        { "key": "IBAN", "value": "UA133510050000026004879163861" },
+        { "key": "Bank", "value": "UKRSIBBANK" }
+      ],
+      "USD": [
+        { "key": "Recipient: CO CF “Perehrestya Mriy”" },
+        { "key": "USREOU code: 44670442" },
+        { "key": "IBAN:UA493510050000026002879163863" },
+        { "key": "Bank: UKRSIBBANKK" },
+        { "key": "Recipient", "value": "CO CF “Perehrestya Mriy”" },
+        { "key": "USREOU code", "value": "44670442" },
+        { "key": "IBAN", "value": "UA493510050000026002879163863" },
+        {
+          "key": "Bank",
+          "value": "UKRSIBBANK ANDRIIVSKA STREET 2/12 KYIV, UKRAINE"
+        },
+        { "key": "SWIFT code", "value": "KHABUA2K" },
+        {
+          "key": "Correspondent bank",
+          "value": "020061151200138 BNP PARIBAS U.S.A. - New York Branch New York , USA"
+        },
+        { "key": "SWIFT code of the correspondent bank", "value": "BNPAUS3N" }
+      ],
+      "EUR": [
+        { "key": "Recipient", "value": "CO CF “Perehrestya Mriy”" },
+        { "key": "USREOU code", "value": "44670442" },
+        { "key": "IBAN", "value": "UA313510050000026003879163862" },
+        {
+          "key": "Bank",
+          "value": "07205696 UKRSIBBANK ANDRIIVSKA STREET 2/12 KYIV, UKRAINE"
+        },
+        { "key": "SWIFT code", "value": "KHABUA2K" },
+        {
+          "key": "Correspondent bank",
+          "value": "07205696 BNP PARIBAS SA Paris, FRANCE"
+        },
+        { "key": "SWIFT code of the сorrespondent bank", "value": "BNPAFRPP" }
+      ]
+    },
+    "form": {
+      "subject": "Perehrestya Mriy | Form submission",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Message",
+      "button": "Send"
+    }
+  },
+  "contact": {
+    "title": "Contact us",
+    "address": "address",
+    "phone": "38 067 935 84 70",
+    "email": "email",
+    "telegram": "telegram",
+    "copyright": "© 2022 Charity Foundation “Perehrestya Mriy”"
+  }
+}

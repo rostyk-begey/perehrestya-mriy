@@ -2,7 +2,9 @@ import Modal from './Modal';
 
 const MobileMenu = ({
   menuItems,
+  supportedLanguages,
 }: {
+  supportedLanguages: Record<string, string>;
   menuItems: {
     title: string;
     href: string;
@@ -62,13 +64,16 @@ const MobileMenu = ({
               <img src="/images/facebook-icon.svg" alt="" />
             </a>
           </div>
-          <a
-            className="block py-1.5 px-2 hover:bg-primary-blue hover:text-white"
-            href="/en"
-            data-close-modal
-          >
-            EN
-          </a>
+          {Object.entries(supportedLanguages).map(([key, value]) => (
+            <a
+              key={key}
+              className="block py-1.5 px-2 uppercase hover:bg-primary-blue hover:text-white"
+              href={value}
+              data-close-modal
+            >
+              {key}
+            </a>
+          ))}
         </div>
       </div>
     </Modal>

@@ -1,20 +1,31 @@
 ---
+import i18n, { t } from 'i18next';
+import { localizePath } from 'astro-i18next';
+
 import LangSelector from './LangSelector.tsx';
 import MobileMenu from './MobileMenu.tsx';
+import { instagramUrl } from '../lib/content';
 
 const menuItems = [
-  { title: 'про фонд', href: '#about' },
-  { title: 'напрямки роботи', href: '#directions' },
-  { title: 'документи', href: '#documents' },
-  { title: 'зв’язок', href: '#contact' },
+  { title: t('navigation.about'), href: '#about' },
+  { title: t('navigation.directions'), href: '#directions' },
+  { title: t('navigation.documents'), href: '#documents' },
 ];
+
+const pathname = Astro.url.pathname;
+const currentLanguage = i18n.language;
+const languagesMap = i18n.languages.reduce((acc, lang) => {
+  if (lang === currentLanguage) return acc;
+  acc[lang] = localizePath('/', lang);
+  return acc;
+}, {});
 ---
 
 <header class="sticky top-0 z-40 bg-white px-5 shadow-md">
   <div
     class="container mx-auto flex min-h-[78px] items-center justify-between lg:min-h-[125px]"
   >
-    <img src="/images/logo-uk.svg" alt="logo" class="h-12 lg:h-[77px]" />
+    <img src={t('navigation.logoUrl')} alt="logo" class="h-12 lg:h-[77px]" />
     <div class="hidden items-center gap-5 md:gap-10 lg:flex">
       <nav>
         <ul class="flex gap-5 text-xs font-bold uppercase leading-5 text-black">
@@ -30,14 +41,24 @@ const menuItems = [
       <a
         href="#contact"
         class="bg-primary-yellow py-2 px-4 text-xs font-bold uppercase text-black"
-        >контакти</a
+        >{t('navigation.button')}</a
       >
-      <LangSelector client:visible />
+      <LangSelector
+        client:load
+        currentLanguage={currentLanguage}
+        supportedLanguages={languagesMap}
+      />
       <div class="flex gap-6">
-        <a href="#"><img src="/images/instagram-icon.svg" alt="" /></a>
+        <a href={instagramUrl}
+          ><img src="/images/instagram-icon.svg" alt="" /></a
+        >
         <a href="#"><img src="/images/facebook-icon.svg" alt="" /></a>
       </div>
     </div>
-    <MobileMenu menuItems={menuItems} client:media="(max-width: 1034px)" />
+    <MobileMenu
+      supportedLanguages={languagesMap}
+      menuItems={menuItems}
+      client:media="(max-width: 1034px)"
+    />
   </div>
 </header>

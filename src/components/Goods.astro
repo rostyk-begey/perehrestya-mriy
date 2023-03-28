@@ -1,9 +1,13 @@
+---
+import { t } from 'i18next';
+---
+
 <section class="lg:px-62 py-20 px-6 md:py-12 md:px-10 lg:py-16">
   <div class="container mx-auto flex flex-col">
     <h2
       class="mx-auto mb-8 font-heading text-3xl font-bold font-bold md:mb-12 md:text-6xl"
     >
-      Необхідні товари
+      {t('goods.title')}
     </h2>
     <div
       class="mx-auto flex max-w-6xl flex-wrap justify-center gap-y-8 gap-x-10 text-lg font-bold md:gap-x-28"
@@ -12,43 +16,43 @@
         class="flex max-w-[130px] shrink-0 basis-48 flex-col items-center text-center font-heading"
       >
         <img src="/images/apple.svg" alt="" />
-        <span>Продукти харчування</span>
+        <span>{t('goods.items.0.title')}</span>
       </div>
       <div
         class="flex max-w-[130px] shrink-0 basis-48 flex-col items-center text-center font-heading"
       >
         <img src="/images/drop.svg" alt="" />
-        <span>Засоби гігієни</span>
+        <span>{t('goods.items.0.title')}</span>
       </div>
       <div
         class="flex max-w-[130px] shrink-0 basis-48 flex-col items-center text-center font-heading"
       >
         <img src="/images/gas-pump.svg" alt="" />
-        <span>Паливо</span>
+        <span>{t('goods.items.1.title')}</span>
       </div>
       <div
         class="flex max-w-[130px] shrink-0 basis-48 flex-col items-center text-center font-heading"
       >
         <img src="/images/flash.svg" alt="" />
-        <span>Генератори</span>
+        <span>{t('goods.items.2.title')}</span>
       </div>
       <div
         class="flex max-w-[130px] shrink-0 basis-48 flex-col items-center text-center font-heading"
       >
         <img src="/images/wall.svg" alt="" />
-        <span>Будівельні матеріали</span>
+        <span>{t('goods.items.3.title')}</span>
       </div>
       <div
         class="flex max-w-[130px] shrink-0 basis-48 flex-col items-center text-center font-heading"
       >
         <img src="/images/rocket.svg" alt="" />
-        <span>Військове спорядження</span>
+        <span>{t('goods.items.4.title')}</span>
       </div>
       <div
         class="flex max-w-[130px] shrink-0 basis-48 flex-col items-center text-center font-heading"
       >
         <img src="/images/briefcase.svg" alt="" />
-        <span>Медичне обладнання</span>
+        <span>{t('goods.items.5.title')}</span>
       </div>
     </div>
   </div>

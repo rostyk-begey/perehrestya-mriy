@@ -1,4 +1,5 @@
 ---
+import { t } from 'i18next';
 import FAQItem from '../components/FAQItem.tsx';
 ---
 
@@ -7,26 +8,15 @@ import FAQItem from '../components/FAQItem.tsx';
     <h2
       class="mx-auto mb-8 font-heading text-3xl font-bold font-bold md:mb-12 md:text-6xl"
     >
-      Питання і відповіді
+      {t('faq.title')}
     </h2>
     <div>
       <div>
-        <FAQItem title="Як я можу допомогти?" client:visible>
-          Ми потребуємо фінансової або гуманітарної допомоги. Гуманітарна
-          допомога може складатися з продуктів харчування та засобів гігієни для
-          цивільного населення, з військової амуніції для наших захисників або
-          медикаментів для постраждалих від військової агресії Російської
-          Федерації.
+        <FAQItem title={t('faq.items.0.question')} client:visible>
+          {t('faq.items.0.answer')}
         </FAQItem>
-        <FAQItem
-          title="Я хочу надати гуманітарний вантаж, як це зробити?"
-          client:visible
-        >
-          Ми потребуємо фінансової або гуманітарної допомоги. Гуманітарна
-          допомога може складатися з продуктів харчування та засобів гігієни для
-          цивільного населення, з військової амуніції для наших захисників або
-          медикаментів для постраждалих від військової агресії Російської
-          Федерації.
+        <FAQItem title={t('faq.items.1.question')} client:visible>
+          {t('faq.items.1.answer')}
         </FAQItem>
       </div>
     </div>

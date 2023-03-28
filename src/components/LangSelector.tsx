@@ -1,7 +1,13 @@
 import { Popover, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
 
-export default function LangSelector() {
+export default function LangSelector({
+  supportedLanguages,
+  currentLanguage,
+}: {
+  supportedLanguages: Record<string, string>;
+  currentLanguage: string;
+}) {
   return (
     <Popover className="relative">
       {({ open }) => (
@@ -11,7 +17,7 @@ export default function LangSelector() {
                 ${open ? '' : 'text-opacity-90'}
                 flex items-center border border-transparent py-1.5 px-2 text-sm font-medium focus:border-primary-blue`}
           >
-            <span>UK</span>
+            <span className="uppercase">{currentLanguage}</span>
             <svg
               className={`-mr-1 ml-2 h-5 w-5 ${open ? 'rotate-180' : ''}`}
               viewBox="0 0 20 20"
@@ -37,17 +43,19 @@ export default function LangSelector() {
             <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-full -translate-x-1/2 transform">
               <ul
                 id="locale-tooltip"
-                className="border text-sm font-medium"
+                className="border bg-white text-sm font-medium"
                 role="tooltip"
               >
-                <li>
-                  <a
-                    className="block py-1.5 px-2 hover:bg-primary-blue hover:text-white"
-                    href="/en"
-                  >
-                    EN
-                  </a>
-                </li>
+                {Object.entries(supportedLanguages).map(([lang, path]) => (
+                  <li key={lang}>
+                    <a
+                      className="block py-1.5 px-2 uppercase hover:bg-primary-blue hover:text-white"
+                      href={path}
+                    >
+                      {lang}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </Popover.Panel>
           </Transition>

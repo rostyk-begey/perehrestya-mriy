@@ -1,4 +1,4 @@
-import { useId } from 'preact/compat';
+import { useId } from 'react';
 
 const Input = ({
   name,

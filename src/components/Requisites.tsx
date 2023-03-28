@@ -1,34 +1,19 @@
 import { Tab } from '@headlessui/react';
 import { Fragment } from 'react';
+import { useTranslation } from 'react-i18next';
 
-const tabs = {
-  UAH: {
-    IBAN: 'UA213052990000026004021027544',
-    ЄДРПОУ: '44874701',
-    'Назва банку': 'АТ КБ "Приватбанк"',
-    Отримувач: 'БО БФ Перехрестя Мрій',
-    'Призначення платежу': 'Благодійна пожертва',
-  },
-  USD: {
-    IBAN: 'USD',
-    ЄДРПОУ: '44874701',
-    'Назва банку': 'АТ КБ "Приватбанк"',
-    Отримувач: 'БО БФ Перехрестя Мрій',
-    'Призначення платежу': 'Благодійна пожертва',
-  },
-  EUR: {
-    IBAN: 'EUR',
-    ЄДРПОУ: '44874701',
-    'Назва банку': 'АТ КБ "Приватбанк"',
-    Отримувач: 'БО БФ Перехрестя Мрій',
-    'Призначення платежу': 'Благодійна пожертва',
-  },
-};
-
-const Requisites = () => {
+const Requisites = ({
+  caption,
+  qrCodeCaption,
+  tabs,
+}: {
+  caption: string;
+  qrCodeCaption: string;
+  tabs: Record<string, [string, string][]>;
+}) => {
   return (
     <Tab.Group as="div" className="space-y-4">
-      <p>Бажаєте долучитись до збору коштів? Наші реквізити:</p>
+      <p>{caption}</p>
       <Tab.List className="flex gap-1.5">
         {Object.keys(tabs).map((tab) => (
           <Tab as={Fragment} key={tab}>
@@ -49,8 +34,8 @@ const Requisites = () => {
           {Object.values(tabs).map((data, i) => (
             <Tab.Panel key={i}>
               <ul>
-                {Object.entries(data).map(([key, value]) => (
-                  <li key={key}>
+                {data.map(([key, value]) => (
+                  <li key={key + value}>
                     {key}: <strong>{value}</strong>
                   </li>
                 ))}
@@ -59,9 +44,7 @@ const Requisites = () => {
           ))}
         </Tab.Panels>
         <div className="flex max-w-[273px] items-center gap-6">
-          <p className="text-xs">
-            QR-код для швидкого переказу через Приват24:
-          </p>
+          <p className="text-xs">{qrCodeCaption}</p>
           <img src="/images/Pryvat-QR-code.png" alt="" />
         </div>
       </div>

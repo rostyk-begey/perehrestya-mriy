@@ -1,6 +1,7 @@
+import i18n from 'i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import type { ReactNode } from 'react';
 import Modal from './Modal';
-import { content } from '../lib/content';
 
 const DetailsBlock = ({
   title,
@@ -15,6 +16,7 @@ const DetailsBlock = ({
   className?: string;
   theme: 'dark' | 'light' | 'white';
 }) => {
+  const { t } = useTranslation('translation', { i18n });
   const bg = {
     dark: 'bg-primary-blue',
     light: 'bg-primary-blue-light',
@@ -55,7 +57,7 @@ const DetailsBlock = ({
             onClick={onClick}
             className="ml-auto border border-primary-yellow py-2 px-4 text-xs font-bold uppercase text-primary-yellow group-[.white]:text-black"
           >
-            Докладніше
+            {t('directions.readMore')}
           </button>
         )}
       >
@@ -71,7 +73,7 @@ const DetailsBlock = ({
           href="#join"
           className="bg-primary-yellow py-2 px-4 font-bold text-black"
         >
-          долучитись до збору
+          {t('directions.joinButton')}
         </a>
       </Modal>
       {['dark', 'light'].includes(theme) && (
@@ -86,65 +88,62 @@ const DetailsBlock = ({
   );
 };
 
-export const DetailsBlock1 = ({ className }: { className: string }) => (
-  <DetailsBlock
-    theme="dark"
-    className={className}
-    title={
-      <>
-        Допомога <br />
-        <b>захисникам</b>
-      </>
-    }
-    excerpt={
-      <>
-        24 лютого 2022 року життя України змінилось назавжди. Того злощасного
-        ранку наша країна прокинулась.
-      </>
-    }
-  >
-    {content}
-  </DetailsBlock>
-);
+export const DetailsBlock1 = ({ className }: { className: string }) => {
+  const { t } = useTranslation('translation', { i18n });
 
-export const DetailsBlock2 = ({ className }: { className: string }) => (
-  <DetailsBlock
-    theme="white"
-    className={className}
-    title={
-      <>
-        Допомога на <br />
-        <b>відбудову Харкова</b>
-      </>
-    }
-    excerpt={
-      <>
-        24 лютого 2022 року життя України змінилось назавжди. Того злощасного
-        ранку.
-      </>
-    }
-  >
-    {content}
-  </DetailsBlock>
-);
+  return (
+    <DetailsBlock
+      theme="dark"
+      className={className}
+      title={
+        <Trans i18n={i18n} i18nKey="directions.items.0.title">
+          Допомога
+          <b>захисникам</b>
+        </Trans>
+      }
+      excerpt={t('directions.items.0.excerpt')}
+    >
+      {t('directions.items.0.content')}
+    </DetailsBlock>
+  );
+};
 
-export const DetailsBlock3 = ({ className }: { className: string }) => (
-  <DetailsBlock
-    theme="light"
-    className={className}
-    title={
-      <>
-        Допомога <br />
-        <b>постраждалим</b>
-      </>
-    }
-    excerpt={
-      <>
-        24 лютого 2022 року життя України змінилось назавжди. Того злощасного
-        ранку наша країна прокинулась від звуків російських обстрілів.
-      </>
-    }
-  >
-    {content}
-  </DetailsBlock>
-);
+export const DetailsBlock2 = ({ className }: { className: string }) => {
+  const { t } = useTranslation('translation', { i18n });
+
+  return (
+    <DetailsBlock
+      theme="white"
+      className={className}
+      title={
+        <Trans i18n={i18n} i18nKey="directions.items.1.title">
+          Допомога на
+          <b>відбудову Харкова</b>
+        </Trans>
+      }
+      excerpt={t('directions.items.1.excerpt')}
+    >
+      {t('directions.items.1.content')}
+    </DetailsBlock>
+  );
+};
+
+export const DetailsBlock3 = ({ className }: { className: string }) => {
+  const { t } = useTranslation('translation', { i18n });
+
+  return (
+    <DetailsBlock
+      theme="light"
+      className={className}
+      title={
+        <Trans i18n={i18n} i18nKey={`directions.items.${2}.title` as const}>
+          Допомога
+          <b>постраждалим</b>
+        </Trans>
+      }
+      excerpt={t('directions.items.2.excerpt')}
+    >
+      {t('directions.items.2.content')}
+    </DetailsBlock>
+  );
+};

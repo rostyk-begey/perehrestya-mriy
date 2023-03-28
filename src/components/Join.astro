@@ -1,6 +1,19 @@
 ---
+import { t } from 'i18next';
 import Form from './Form.astro';
 import Requisites from './Requisites.tsx';
+import Counter from './Counter.tsx';
+
+const formatRequisites = ({ key, value }: { key: string; value: string }) => [
+  key,
+  value,
+];
+
+const tabs = {
+  UAH: t('join.requisites.UAH', { returnObjects: true }).map(formatRequisites),
+  USD: t('join.requisites.USD', { returnObjects: true }).map(formatRequisites),
+  EUR: t('join.requisites.EUR', { returnObjects: true }).map(formatRequisites),
+};
 ---
 
 <section id="join" class="lg:px-62 px-6 py-10 md:px-10 md:py-12 lg:py-20">
@@ -8,10 +21,15 @@ import Requisites from './Requisites.tsx';
     <h2
       class="mx-auto mb-20 border-b-4 border-primary-yellow pb-4 font-heading text-3xl font-bold font-bold md:mb-12 md:text-6xl"
     >
-      Долучитись
+      {t('join.title')}
     </h2>
     <div class="mx-auto max-w-2xl">
-      <Requisites client:visible />
+      <Requisites
+        client:visible
+        tabs={tabs}
+        caption={t('join.requisitesCaption')}
+        qrCodeCaption={t('join.prirvatbankQRcodeCaption')}
+      />
       <Form />
     </div>
   </div>

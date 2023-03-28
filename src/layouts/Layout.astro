@@ -1,46 +1,51 @@
 ---
+import i18next, { t } from 'i18next';
+import { Trans, HeadHrefLangs } from 'astro-i18next/components';
+
 export interface Props {
   title: string;
-  lang?: string;
+  description?: string;
 }
 
-const { title, lang = 'uk' } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang={lang} class="scroll-pt-[125px] scroll-smooth">
+<html lang={i18next.language} class="scroll-pt-[125px] scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    {description && <meta name="description" content="{description}" />}
+    <HeadHrefLangs />
   </head>
   <body>
     <slot />
+    <style is:global>
+      @font-face {
+        font-family: UkrSansN;
+        font-weight: 700;
+        src: url(/fonts/UkrSansN-Bold.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: UkrSansN;
+        font-weight: 700;
+        font-style: italic;
+        src: url(/fonts/UkrSansN-BoldItalic.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: UkrSansN;
+        font-weight: 400;
+        src: url(/fonts/UkrSansN-Regular.ttf) format('truetype');
+      }
+      @font-face {
+        font-family: UkrSansN;
+        font-weight: 400;
+        font-style: italic;
+        src: url(/fonts/UkrSansN-Regular.ttf) format('truetype');
+      }
+    </style>
   </body>
 </html>
-<style is:global>
-  @font-face {
-    font-family: UkrSansN;
-    font-weight: 700;
-    src: url(/fonts/UkrSansN-Bold.ttf) format('truetype');
-  }
-  @font-face {
-    font-family: UkrSansN;
-    font-weight: 700;
-    font-style: italic;
-    src: url(/fonts/UkrSansN-BoldItalic.ttf) format('truetype');
-  }
-  @font-face {
-    font-family: UkrSansN;
-    font-weight: 400;
-    src: url(/fonts/UkrSansN-Regular.ttf) format('truetype');
-  }
-  @font-face {
-    font-family: UkrSansN;
-    font-weight: 400;
-    font-style: italic;
-    src: url(/fonts/UkrSansN-Regular.ttf) format('truetype');
-  }
-</style>

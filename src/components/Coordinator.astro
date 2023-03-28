@@ -2,23 +2,24 @@
 interface Props {
   name: string;
   position: string;
-  email: string;
-  telegram: string;
+  phone: string;
+  image: string;
 }
 
-const { name, position, email, telegram } = Astro.props;
+const { name, position, phone, image } = Astro.props;
 ---
 
 <div class="flex w-full max-w-[380px] flex-grow flex-col">
-  <picture class="mb-4 aspect-square w-full bg-gray-500 lg:mb-8"> </picture>
+  <picture class="mb-4 aspect-square w-full lg:mb-8">
+    <img src={image} alt={name} class="inset-0 object-cover" />
+  </picture>
   <div class="flex flex-col gap-1.5 lg:gap-2">
     <span class="text-lg font-semibold text-primary-blue lg:text-2xl"
       >{name}</span
     >
     <span class="font-bold text-black lg:text-lg">{position}</span>
     <p class="flex flex-col text-sm lg:text-base">
-      <a class="hover:underline" href="#">tg icon {telegram}</a>
-      <a class="hover:underline" href="mailto:{email}">{email}</a>
+      <a class="hover:underline" href={`tel:${phone}`}>{phone}</a>
     </p>
   </div>
 </div>
