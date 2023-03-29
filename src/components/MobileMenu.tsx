@@ -1,6 +1,7 @@
 import i18n from 'i18next';
 import { useTranslation } from 'react-i18next';
 import Modal from './Modal';
+import { instagramUrl } from '../lib/content';
 
 const MobileMenu = ({
   menuItems,
@@ -21,6 +22,7 @@ const MobileMenu = ({
           type="button"
           className="w-7 space-y-2 lg:hidden"
           onClick={onClick}
+          aria-label="Open menu"
         >
           <span className="block h-0.5 w-full bg-black"></span>
           <span className="block h-0.5 w-full bg-black"></span>
@@ -63,12 +65,12 @@ const MobileMenu = ({
         </a>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-6">
-            <a data-close-modal href="#">
+            <a data-close-modal href={instagramUrl} aria-label="Instagram link">
               <img src="/images/instagram-icon.svg" alt="" />
             </a>
-            <a data-close-modal href="#">
+            {/* <a data-close-modal href="#">
               <img src="/images/facebook-icon.svg" alt="" />
-            </a>
+            </a> */}
           </div>
           {Object.entries(supportedLanguages).map(([key, value]) => (
             <a

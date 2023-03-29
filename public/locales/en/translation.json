@@ -69,19 +69,19 @@
         "name": "Oleksandra Skorohodova",
         "label": "Financial and legal issues",
         "phone": "+380 67 673 1564",
-        "image": "/images/oleksandra-skorohodova.png"
+        "image": "/images/oleksandra-skorohodova.webp"
       },
       {
         "name": "Vadim Leonov",
         "label": "Co-founder",
         "phone": "+380 63 745 53 75",
-        "image": "/images/vadim-leontov.png"
+        "image": "/images/vadim-leontov.webp"
       },
       {
         "name": "Mykhailo Bolotov",
         "label": "Co-founder",
         "phone": "+380 68 380 1321",
-        "image": "/images/mykhailo-bolotov.png"
+        "image": "/images/mykhailo-bolotov.webp"
       }
     ]
   },
@@ -189,7 +189,8 @@
     },
     "form": {
       "subject": "Perehrestya Mriy | Form submission",
-      "name": "Name",
+      "firstName": "First Name",
+      "lastName": "Last Name",
       "email": "Email",
       "phone": "Phone",
       "message": "Message",
@@ -199,7 +200,7 @@
   "contact": {
     "title": "Contact us",
     "address": "address",
-    "phone": "38 067 935 84 70",
+    "phone": "+38 067 935 84 70",
     "email": "email",
     "telegram": "telegram",
     "copyright": "© 2022 Charity Foundation “Perehrestya Mriy”"

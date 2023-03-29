@@ -55,19 +55,19 @@
         "name": "Олександра Скороходова",
         "label": "Фінансові та юридичні питання",
         "phone": "+380 67 673 1564",
-        "image": "/images/oleksandra-skorohodova.png"
+        "image": "/images/oleksandra-skorohodova.webp"
       },
       {
         "name": "Вадім Леонов",
         "label": "Співзасновник",
         "phone": "+380 63 745 53 75",
-        "image": "/images/vadim-leontov.png"
+        "image": "/images/vadim-leontov.webp"
       },
       {
         "name": "Михайло Болотов",
         "label": "Співзасновник",
         "phone": "+380 68 380 1321",
-        "image": "/images/mykhailo-bolotov.png"
+        "image": "/images/mykhailo-bolotov.webp"
       }
     ]
   },

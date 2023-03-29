@@ -1,6 +1,6 @@
 ---
 import { t } from 'i18next';
-import { instagramUrl } from '../lib/content';
+import { emailAddress, instagramUrl } from '../lib/content';
 ---
 
 <footer
@@ -27,13 +27,13 @@ import { instagramUrl } from '../lib/content';
               <a href="#" class="hover:underline">
                 {t("contact.telegram")}
               </a>
-            </li>
-            <li>
-              <a href="#" class="hover:underline">
-                {t("contact.email")}
-              </a>
             </li> */
           }
+          <li>
+            <a href={`mailto:${emailAddress}`} class="hover:underline">
+              {emailAddress}
+            </a>
+          </li>
         </ul>
       </div>
       <div class="order-first md:order-none">
@@ -42,7 +42,7 @@ import { instagramUrl } from '../lib/content';
     </div>
     <div class="mt-12 flex flex-col justify-between gap-10 md:flex-row">
       <div class="flex">
-        <a href={instagramUrl}>
+        <a href={instagramUrl} aria-label="Instagram link">
           <img src="/images/instagram-icon.svg" alt="" />
         </a>
       </div>

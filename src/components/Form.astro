@@ -1,9 +1,10 @@
 ---
 import { t } from 'i18next';
 import Input from './Input.tsx';
+import { emailAddress } from '../lib/content';
 ---
 
-<form id="contact-form" class="mt-6 space-y-4">
+<form id="contact-form" class="mt-6 space-y-4" data-email={emailAddress}>
   <p>
     {t('join.formCation')}
   </p>
@@ -48,13 +49,12 @@ import Input from './Input.tsx';
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    // open email client
     const formData = new FormData(form);
-    console.log(Object.fromEntries(formData.entries()));
     const body = formatEmail(Object.fromEntries(formData.entries()));
+    const emailAddress = form.dataset.email;
 
     const subject = 'Питання про співпрацю';
-    const mailto = `mailto:perehrestya.mriy@gmail.com?subject=${subject}&body=${encodeURIComponent(
+    const mailto = `mailto:${emailAddress}?subject=${subject}&body=${encodeURIComponent(
       body,
     )}`;
 
