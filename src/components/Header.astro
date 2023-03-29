@@ -12,7 +12,6 @@ const menuItems = [
   { title: t('navigation.documents'), href: '#documents' },
 ];
 
-const pathname = Astro.url.pathname;
 const currentLanguage = i18n.language;
 const languagesMap = i18n.languages.reduce((acc, lang) => {
   if (lang === currentLanguage) return acc;
@@ -41,18 +40,19 @@ const languagesMap = i18n.languages.reduce((acc, lang) => {
       <a
         href="#contact"
         class="bg-primary-yellow py-2 px-4 text-xs font-bold uppercase text-black"
-        >{t('navigation.button')}</a
       >
+        {t('navigation.button')}
+      </a>
       <LangSelector
         client:load
         currentLanguage={currentLanguage}
         supportedLanguages={languagesMap}
       />
       <div class="flex gap-6">
-        <a href={instagramUrl}
-          ><img src="/images/instagram-icon.svg" alt="" /></a
-        >
-        <a href="#"><img src="/images/facebook-icon.svg" alt="" /></a>
+        <a href={instagramUrl}>
+          <img src="/images/instagram-icon.svg" alt="" />
+        </a>
+        {/*<a href="#"><img src="/images/facebook-icon.svg" alt="" /></a>*/}
       </div>
     </div>
     <MobileMenu

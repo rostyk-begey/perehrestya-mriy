@@ -1,38 +1,52 @@
 ---
 import { t } from 'i18next';
+import { instagramUrl } from '../lib/content';
 ---
 
 <footer
   id="contact"
   class="lg:px-62 bg-gray-300 px-6 py-10 md:px-10 md:py-12 lg:py-20"
 >
-  <div
-    class="mx-auto flex max-w-6xl flex-col items-center gap-6 md:flex-row md:items-start md:justify-between"
-  >
-    <div class="text-center md:text-left">
-      <h2 class="mb-6 font-heading text-2xl font-bold md:mb-16">
-        {t('contact.title')}
-      </h2>
-      <ul class="space-y-3">
-        <li>
-          <a href="tel:+38 067 935 84 70" class="hover:underline">
-            {t('contact.phone')}
-          </a>
-        </li>
-        <li>
-          <a href="#" class="hover:underline">
-            {t('contact.telegram')}
-          </a>
-        </li>
-        <li>
-          <a href="#" class="hover:underline">
-            {t('contact.email')}
-          </a>
-        </li>
-      </ul>
+  <div class="mx-auto max-w-6xl">
+    <div
+      class="flex flex-col items-center gap-6 md:flex-row md:items-start md:justify-between"
+    >
+      <div class="text-center md:text-left">
+        <h2 class="mb-6 font-heading text-2xl font-bold md:mb-16">
+          {t('contact.title')}
+        </h2>
+        <ul class="space-y-3">
+          <li>
+            <a href={`tel:${t('contact.phone')}`} class="hover:underline">
+              {t('contact.phone')}
+            </a>
+          </li>
+          {
+            /*
+            <li>
+              <a href="#" class="hover:underline">
+                {t("contact.telegram")}
+              </a>
+            </li>
+            <li>
+              <a href="#" class="hover:underline">
+                {t("contact.email")}
+              </a>
+            </li> */
+          }
+        </ul>
+      </div>
+      <div class="order-first md:order-none">
+        <img src={t('navigation.logoUrl')} alt={t('meta.title')} />
+      </div>
     </div>
-    <div class="order-first md:order-none">
-      <img src="/images/logo-uk.svg" alt="" />
+    <div class="mt-12 flex flex-col justify-between gap-10 md:flex-row">
+      <div class="flex">
+        <a href={instagramUrl}>
+          <img src="/images/instagram-icon.svg" alt="" />
+        </a>
+      </div>
+      <small>{t('contact.copyright')}</small>
     </div>
   </div>
 </footer>
