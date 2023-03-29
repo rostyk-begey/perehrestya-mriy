@@ -1,3 +1,5 @@
+import i18n from 'i18next';
+import { useTranslation } from 'react-i18next';
 import Modal from './Modal';
 
 const MobileMenu = ({
@@ -10,6 +12,7 @@ const MobileMenu = ({
     href: string;
   }[];
 }) => {
+  const { t } = useTranslation('translation', { i18n });
   return (
     <Modal
       className="flex h-full w-[75vw] max-w-[300px] flex-col bg-white shadow-2xl"
@@ -27,7 +30,10 @@ const MobileMenu = ({
     >
       <div className="flex min-h-[78px] items-center justify-between px-5 md:min-h-[125px]">
         <img
-          src="/images/logo-uk.svg"
+          src={
+            t('navigation.logoUrl', { defaultValue: '/images/logo-uk.svg' }) ||
+            ''
+          }
           alt="logo"
           className="h-12 md:h-[77px]"
         />

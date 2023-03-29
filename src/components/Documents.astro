@@ -5,18 +5,19 @@ import { t } from 'i18next';
 <section id="documents" class="lg:px-62 px-6 pt-20 md:px-10 md:pt-12 lg:pt-16">
   <div class="container mx-auto flex flex-col">
     <h2
-      class="mx-auto mb-8 font-heading text-3xl font-bold font-bold md:mb-12 md:text-6xl"
+      class="mx-auto mb-8 font-heading text-3xl font-bold md:mb-12 md:text-6xl"
     >
       {t('documents.title')}
     </h2>
     <div
-      class="mx-auto flex w-full max-w-sm flex-col gap-9 md:max-w-none md:flex-row lg:gap-12"
+      class="mx-auto flex w-full max-w-sm flex-col gap-9 md:grid md:max-w-none md:grid-cols-3 lg:gap-12"
     >
       {
-        t('documents.items', { returnObjects: true }).map(({ title }) => (
+        t('documents.items', { returnObjects: true }).map(({ title, link }) => (
           <a
-            href="#"
-            class="group flex flex-grow flex-col items-center gap-4 border-2 border-primary-blue p-8 text-black hover:bg-primary-blue hover:text-white"
+            href={link}
+            target="_blank"
+            class="group flex max-w-[400px] flex-grow flex-col items-center gap-4 border-2 border-primary-blue p-8 text-black hover:bg-primary-blue hover:text-white"
           >
             <svg
               class="fill-primary-blue group-hover:fill-white"
@@ -27,9 +28,8 @@ import { t } from 'i18next';
             >
               <path d="M14 24.5C14 23.6716 14.6716 23 15.5 23C16.3284 23 17 23.6716 17 24.5C17 25.3284 16.3284 26 15.5 26C14.6716 26 14 25.3284 14 24.5ZM15.5 29C14.6716 29 14 29.6716 14 30.5C14 31.3284 14.6716 32 15.5 32C16.3284 32 17 31.3284 17 30.5C17 29.6716 16.3284 29 15.5 29ZM14 36.5C14 35.6716 14.6716 35 15.5 35C16.3284 35 17 35.6716 17 36.5C17 37.3284 16.3284 38 15.5 38C14.6716 38 14 37.3284 14 36.5ZM21.5 23C20.6716 23 20 23.6716 20 24.5C20 25.3284 20.6716 26 21.5 26H32.5C33.3284 26 34 25.3284 34 24.5C34 23.6716 33.3284 23 32.5 23H21.5ZM20 30.5C20 29.6716 20.6716 29 21.5 29H32.5C33.3284 29 34 29.6716 34 30.5C34 31.3284 33.3284 32 32.5 32H21.5C20.6716 32 20 31.3284 20 30.5ZM21.5 35C20.6716 35 20 35.6716 20 36.5C20 37.3284 20.6716 38 21.5 38H32.5C33.3284 38 34 37.3284 34 36.5C34 35.6716 33.3284 35 32.5 35H21.5ZM38.828 16.828L27.17 5.172C27.14 5.1421 27.1062 5.11616 27.0726 5.09038C27.0476 5.07134 27.023 5.0524 27 5.032C26.858 4.904 26.718 4.778 26.562 4.672C26.5114 4.63788 26.4562 4.61096 26.401 4.58414C26.369 4.56852 26.337 4.55294 26.306 4.536C26.2726 4.51718 26.2394 4.49794 26.206 4.47866C26.0976 4.41594 25.9888 4.35296 25.874 4.304C25.48 4.14 25.056 4.058 24.626 4.028C24.5866 4.02548 24.5476 4.02016 24.5084 4.01482C24.4542 4.00742 24.3998 4 24.344 4H12C9.792 4 8 5.792 8 8V40C8 42.208 9.792 44 12 44H36C38.208 44 40 42.208 40 40V19.656C40 18.596 39.578 17.578 38.828 16.828ZM37 40C37 40.55 36.552 41 36 41H12C11.448 41 11 40.55 11 40V8C11 7.45 11.448 7 12 7H24V16C24 18.208 25.792 20 28 20H37V40ZM27 9.242L34.756 17H28C27.448 17 27 16.55 27 16V9.242Z" />
             </svg>
-            <p class="flex flex-col items-center">
+            <p class="flex flex-col items-center text-center">
               <span class="text-lg font-bold">{title}</span>
-              <span class="font-light">(386.8KB)</span>
             </p>
           </a>
         ))

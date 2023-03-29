@@ -1,6 +1,5 @@
 import { Tab } from '@headlessui/react';
 import { Fragment } from 'react';
-import { useTranslation } from 'react-i18next';
 
 const Requisites = ({
   caption,

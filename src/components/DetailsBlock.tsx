@@ -38,7 +38,7 @@ const DetailsBlock = ({
   return (
     <article
       className={[
-        'group relative relative flex flex-col p-7 sm:p-9 md:p-12',
+        'group relative flex flex-col p-7 sm:p-9 md:p-12',
         text,
         bg,
         theme,

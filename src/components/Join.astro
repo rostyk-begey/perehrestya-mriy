@@ -2,7 +2,6 @@
 import { t } from 'i18next';
 import Form from './Form.astro';
 import Requisites from './Requisites.tsx';
-import Counter from './Counter.tsx';
 
 const formatRequisites = ({ key, value }: { key: string; value: string }) => [
   key,
@@ -19,7 +18,7 @@ const tabs = {
 <section id="join" class="lg:px-62 px-6 py-10 md:px-10 md:py-12 lg:py-20">
   <div class="container mx-auto flex flex-col">
     <h2
-      class="mx-auto mb-20 border-b-4 border-primary-yellow pb-4 font-heading text-3xl font-bold font-bold md:mb-12 md:text-6xl"
+      class="mx-auto mb-20 border-b-4 border-primary-yellow pb-4 font-heading text-3xl font-bold md:mb-12 md:text-6xl"
     >
       {t('join.title')}
     </h2>
