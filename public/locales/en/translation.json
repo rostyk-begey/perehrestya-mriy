@@ -16,17 +16,17 @@
     "joinButton": "join to fundraising",
     "items": [
       {
-        "title": "Aid for <1>defenders</1>",
+        "title": "Aid for <br/><1>defenders</1>",
         "excerpt": "We provide prompt assistance with clothing, equipment, and personal protective gear for our defenders.\n",
         "content": "Supporting Ukrainian soldiers has become the top priority of our foundation. We, like most Ukrainians, feel accountable for proper provisioning of the Armed Forces of Ukraine and territorial defense units, so we are doing everything we can to help them in their fight.\nTo support our country's defenders, we started a fundraising campaign. You can also help the soldiers who are defending our country by joining our charitable initiative and making a donation."
       },
       {
-        "title": "Assistance for <1>Kharkiv's reconstruction</1>",
+        "title": "Assistance for <br/><1>Kharkiv's reconstruction</1>",
         "excerpt": "Our goal is to restore the civil infrastructure of the Kharkiv region's institutions as well as cultural heritage sites\n",
         "content": "We are waiting for a great victory, but that anticipation doesn’t stop our urge to help revitalize our hometown. Currently, we are engaged in the reconstruction of \"Saltivskyi Lid\" ice arena, which is the part of Specialised Children’s and Youth Sports School of the Olympic Reserve.\nThe foundation intends to continue playing an important role in supporting the process of rebuilding the city of Kharkiv, which is the only city in Ukraine awarded with the highest European award – the Europe Prize"
       },
       {
-        "title": "Aid to the <1>victims of war</1>",
+        "title": "Aid to the <br/><1>victims of war</1>",
         "excerpt": "We are implementing life-saving programs for people affected by the war, who need assistance.",
         "content": "Thousands of civilians have lost their homes and belongings, and most of them have no access to necessary medical supplies or basic hygiene items. Due to the Russian military intervention hundreds of towns and villages are on the verge of a humanitarian catastrophe.\nWe are implementing life-saving programs to help people who have suffered from the war and need assistance. We ask for your support in achieving our goal."
       }
@@ -40,25 +40,32 @@
     "title": "Necessary goods",
     "items": [
       {
-        "title": "Food"
+        "title": "Food",
+        "iconSrc": "/images/apple.svg"
       },
       {
-        "title": "Hygiene products"
+        "title": "Hygiene products",
+        "iconSrc": "/images/drop.svg"
       },
       {
-        "title": "Fuel"
+        "title": "Fuel",
+        "iconSrc": "/images/gas-pump.svg"
       },
       {
-        "title": "Diesel generators"
+        "title": "Diesel generators",
+        "iconSrc": "/images/flash.svg"
       },
       {
-        "title": "Building materials"
+        "title": "Building materials",
+        "iconSrc": "/images/wall.svg"
       },
       {
-        "title": "Military clothing"
+        "title": "Military clothing",
+        "iconSrc": "/images/rocket.svg"
       },
       {
-        "title": "Medical equipment"
+        "title": "Medical equipment",
+        "iconSrc": "/images/briefcase.svg"
       }
     ]
   },
@@ -127,7 +134,7 @@
     "title": "Documents",
     "items": [
       {
-        "title": "Extract from the Unified State Register of Legal Entities",
+        "title": "USR extract of Legal Entities",
         "link": "/documents/extract-from-registry.pdf"
       },
       {
@@ -141,7 +148,7 @@
     ]
   },
   "join": {
-    "title": "Join",
+    "title": "Financial Aid",
     "requisitesCaption": "If you want to support our fundraising activity, you can donate here:",
     "formCation": "If you want to help in any other way, let us know and we will find something for you to do.",
     "prirvatbankQRcodeCaption": "QR-code for quick payment via PrivatBank",
@@ -200,7 +207,7 @@
   "contact": {
     "title": "Contact us",
     "address": "address",
-    "phone": "+38 067 935 84 70",
+    "phone": "+380 67 673 1564",
     "email": "email",
     "telegram": "telegram",
     "copyright": "© 2022 Charity Foundation “Perehrestya Mriy”"

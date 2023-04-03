@@ -19,11 +19,15 @@ import {
       class="grid grid-cols-[minmax(250px,380px)] justify-center md:grid-cols-[repeat(2,minmax(250px,360px))] md:justify-start min-[1080px]:grid-cols-[repeat(3,minmax(250px,360px))]"
     >
       <div class="hidden min-[1080px]:block"></div>
-      <DetailsBlock1 client:idle className="w-full h-full" />
+      <DetailsBlock1 client:idle className="w-full h-full min-h-[340px]" />
       <figure
         class="relative row-start-2 hidden h-full w-full overflow-hidden min-[1080px]:block"
       >
-        <img src="/images/hero-img-1.png" alt="" class="" />
+        <img
+          src="/images/hero-img-1.png"
+          alt=""
+          class="h-full w-full object-cover"
+        />
       </figure>
       <DetailsBlock2 client:idle className="w-full h-full row-start-2" />
       <DetailsBlock3

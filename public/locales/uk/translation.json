@@ -39,13 +39,13 @@
   "goods": {
     "title": "Необхідні товари",
     "items": [
-      { "title": "Продукти харчування" },
-      { "title": "Засоби гігієни" },
-      { "title": "Паливо" },
-      { "title": "Генератори" },
-      { "title": "Будівельні матеріали" },
-      { "title": "Військовий одяг" },
-      { "title": "Медичне обладнання" }
+      { "title": "Продукти харчування", "iconSrc": "/images/apple.svg" },
+      { "title": "Засоби гігієни", "iconSrc": "/images/drop.svg" },
+      { "title": "Паливо", "iconSrc": "/images/gas-pump.svg" },
+      { "title": "Генератори", "iconSrc": "/images/flash.svg" },
+      { "title": "Будівельні матеріали", "iconSrc": "/images/wall.svg" },
+      { "title": "Військовий одяг", "iconSrc": "/images/rocket.svg" },
+      { "title": "Медичне обладнання", "iconSrc": "/images/briefcase.svg" }
     ]
   },
   "coordinators": {
@@ -58,7 +58,7 @@
         "image": "/images/oleksandra-skorohodova.webp"
       },
       {
-        "name": "Вадім Леонов",
+        "name": "Вадим Леонов",
         "label": "Співзасновник",
         "phone": "+380 63 745 53 75",
         "image": "/images/vadim-leontov.webp"
@@ -178,7 +178,7 @@
   "contact": {
     "title": "Звʼязатися з нами",
     "address": "address",
-    "phone": "+38 067 935 84 70",
+    "phone": "+380 67 673 1564",
     "email": "email",
     "telegram": "telegram",
     "copyright": "© 2022 Благодійний фонд “Перехрестя мрій”"

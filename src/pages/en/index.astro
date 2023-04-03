@@ -1,20 +1,20 @@
 ---
-import { t, changeLanguage } from 'i18next';
-import Layout from '../../layouts/Layout.astro';
-import Header from '../../components/Header.astro';
-import FAQ from '../../components/FAQ.astro';
-import SliderSection from '../../components/SliderSection.astro';
-import Documents from '../../components/Documents.astro';
-import Footer from '../../components/Footer.astro';
-import Hero from '../../components/Hero.astro';
-import Goods from '../../components/Goods.astro';
-import Coordinators from '../../components/Coordinators.astro';
-import Join from '../../components/Join.astro';
-import Partners from '../../components/Partners.astro';
-import About from '../../components/About.astro';
-import Directions from '../../components/Directions.astro';
+import { t, changeLanguage } from "i18next";
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import FAQ from "../../components/FAQ.astro";
+import SliderSection from "../../components/SliderSection.astro";
+import Documents from "../../components/Documents.astro";
+import Footer from "../../components/Footer.astro";
+import Hero from "../../components/Hero.astro";
+import Goods from "../../components/Goods.astro";
+import Coordinators from "../../components/Coordinators.astro";
+import Join from "../../components/Join.astro";
+import Partners from "../../components/Partners.astro";
+import About from "../../components/About.astro";
+import Directions from "../../components/Directions.astro";
 
-changeLanguage('en');
+changeLanguage("en");
 ---
 
 <Layout title={t('meta.title')} description={t('meta.description')}>
@@ -28,7 +28,9 @@ changeLanguage('en');
         <p class="text-xl md:text-2xl">
           {t('cta1.description')}
         </p>
-        <a href="#join" class="bg-primary-yellow py-2 px-4 font-bold text-black"
+        <a
+          href="#join"
+          class="bg-primary-yellow py-3 px-8 font-bold uppercase text-black"
           >{t('cta1.button')}</a
         >
       </div>
@@ -65,7 +67,7 @@ changeLanguage('en');
       >
       <a
         href="#contact"
-        class="bg-primary-yellow px-14 py-2 px-4 font-heading text-2xl font-bold text-black md:text-base"
+        class="bg-primary-yellow px-14 py-3 font-heading text-2xl font-bold text-black"
         >{t('cta2.button')}</a
       >
     </section>

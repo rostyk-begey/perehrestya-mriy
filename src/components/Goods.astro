@@ -12,48 +12,14 @@ import { t } from 'i18next';
     <div
       class="mx-auto flex max-w-6xl flex-wrap justify-center gap-y-8 gap-x-10 text-lg font-bold md:gap-x-28"
     >
-      <div
-        class="flex max-w-[130px] shrink-0 basis-48 flex-col items-center text-center font-heading"
-      >
-        <img src="/images/apple.svg" alt="" />
-        <span>{t('goods.items.0.title')}</span>
-      </div>
-      <div
-        class="flex max-w-[130px] shrink-0 basis-48 flex-col items-center text-center font-heading"
-      >
-        <img src="/images/drop.svg" alt="" />
-        <span>{t('goods.items.0.title')}</span>
-      </div>
-      <div
-        class="flex max-w-[130px] shrink-0 basis-48 flex-col items-center text-center font-heading"
-      >
-        <img src="/images/gas-pump.svg" alt="" />
-        <span>{t('goods.items.1.title')}</span>
-      </div>
-      <div
-        class="flex max-w-[130px] shrink-0 basis-48 flex-col items-center text-center font-heading"
-      >
-        <img src="/images/flash.svg" alt="" />
-        <span>{t('goods.items.2.title')}</span>
-      </div>
-      <div
-        class="flex max-w-[130px] shrink-0 basis-48 flex-col items-center text-center font-heading"
-      >
-        <img src="/images/wall.svg" alt="" />
-        <span>{t('goods.items.3.title')}</span>
-      </div>
-      <div
-        class="flex max-w-[130px] shrink-0 basis-48 flex-col items-center text-center font-heading"
-      >
-        <img src="/images/rocket.svg" alt="" />
-        <span>{t('goods.items.4.title')}</span>
-      </div>
-      <div
-        class="flex max-w-[130px] shrink-0 basis-48 flex-col items-center text-center font-heading"
-      >
-        <img src="/images/briefcase.svg" alt="" />
-        <span>{t('goods.items.5.title')}</span>
-      </div>
+      {
+        t('goods.items', { returnObjects: true }).map(({ title, iconSrc }) => (
+          <div class="flex max-w-[130px] shrink-0 basis-48 flex-col items-center text-center font-heading">
+            <img src={iconSrc} alt={title} />
+            <span>{title}</span>
+          </div>
+        ))
+      }
     </div>
   </div>
 </section>
