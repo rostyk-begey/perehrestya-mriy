@@ -5,7 +5,7 @@ import { emailAddress, instagramUrl } from '../lib/content';
 
 <footer
   id="contact"
-  class="lg:px-62 bg-gray-300 px-6 py-10 md:px-10 md:py-12 lg:py-20"
+  class="lg:px-62 bg-[#f5f5f5] px-6 py-10 md:px-10 md:py-12 lg:py-20"
 >
   <div class="mx-auto max-w-6xl">
     <div
@@ -21,14 +21,6 @@ import { emailAddress, instagramUrl } from '../lib/content';
               {t('contact.phone')}
             </a>
           </li>
-          {
-            /*
-            <li>
-              <a href="#" class="hover:underline">
-                {t("contact.telegram")}
-              </a>
-            </li> */
-          }
           <li>
             <a href={`mailto:${emailAddress}`} class="hover:underline">
               {emailAddress}

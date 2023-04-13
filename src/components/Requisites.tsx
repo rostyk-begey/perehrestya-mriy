@@ -42,10 +42,6 @@ const Requisites = ({
             </Tab.Panel>
           ))}
         </Tab.Panels>
-        <div className="flex max-w-[273px] items-center gap-6">
-          <p className="text-xs">{qrCodeCaption}</p>
-          <img src="/images/Pryvat-QR-code.png" alt="" />
-        </div>
       </div>
     </Tab.Group>
   );

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Благодійний Фонд Перехрестя Мрій",
-    "description": "Допомога захисникам України і постраждалим від війни. Допомога на відбудову Харкова.\n"
+    "description": "Допомога захисникам України і постраждалим від війни. Допомога на відбудову Харкова."
   },
   "navigation": {
     "logoUrl": "/images/logo-uk.svg",
@@ -108,14 +108,17 @@
     "items": [
       {
         "title": "Виписка з ЄДР",
+        "size": "461MB",
         "link": "/documents/extract-from-registry.pdf"
       },
       {
         "title": "Статут Фонду",
+        "size": "2MB",
         "link": "/documents/charter.pdf"
       },
       {
         "title": "Публічна оферта",
+        "size": "130KB",
         "link": "/documents/public-offer-agreement.pdf"
       }
     ]
